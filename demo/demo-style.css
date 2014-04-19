@@ -1,0 +1,141 @@
+body {
+  background: #eee;
+  font: 400 16px/1.5em 'Ubuntu', sans-serif;
+}
+
+* { outline: 0; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+a { 
+  color: blue;
+  text-decoration: none;
+}
+
+strong { font-weight: 500; }
+
+#wrapper {
+  position: absolute;
+  top: 10%; left: 50%;
+
+  width: 800px;
+  margin: 0 0 0 -400px;
+
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+
+  margin-bottom: 40px;
+}
+
+div {
+  margin: 20px 0;
+}
+
+label { display: none }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Styled form start */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+#mailchimp-signup {
+  width: 240px; 
+  margin: 0 auto;
+}
+
+.mailchimp-input, .mailchimp-submit {
+  display: block;
+
+  padding: 10px 12px;
+
+  background: none;
+
+  font-size: 13px;
+  
+  border: 0;
+  box-shadow: 0;
+  border-radius: 2px;
+}
+
+.mailchimp-input:focus, .mailchimp-submit:focus {
+  border: 1px solid #2E8B57;
+}
+
+.mailchimp-input {
+  width: 240px;
+
+  background: #ddd;
+  
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mailchimp-submit {
+  width: 240px;
+
+  background: #aaa;
+
+  border: 1px solid #aaa;
+}
+.mailchimp-submit:focus {
+  background: #2E8B57;
+  color: white;
+}
+
+.result {
+  width: 240px;
+  margin: 20px auto;
+  font-size: 14px;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Styled form end */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+.code {
+  margin: 100px 0;
+}
+
+.section-header {
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+code, pre {
+  font-size: 14px;
+  font-family: monospace;
+  text-align: left;
+
+  margin-bottom: 5px;
+  
+  background: white;
+}
+
+code { padding: 2px 4px; }
+
+pre { padding: 5px 10px }
+
+article { 
+  margin: 50px 0;
+  text-align: left;
+}
+article h3 { margin: 10px 0; font-weight: 500;}
+article p { margin: 10px 0 }
+article small { 
+  font-size: 12px;
+  font-style: italic;
+}
+
+footer {
+  margin: 40px 0 100px 0;
+}

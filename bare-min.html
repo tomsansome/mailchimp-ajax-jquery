@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<form id="mailchimp-signup" action="subscribe.php">
+  <input id="mailchimp-email" type="email" name="email" placeholder="Email" required></input>
+  <input id="mailchimp-fname" type="text" name="fname" placeholder="First Name" required></input>
+  <input id="mailchimp-lname" type="text" name="lname" placeholder="Last Name" required></input>
+  <button type="submit">Do it!</button>
+</form>
+<div class="result"></div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+
+  function loading() {
+    $('.result').show().html('Loading...');
+  }
+
+  function formResult(data) {
+    $('.result').html(data);
+    $('#mailchimp-signup input').val('');
+  }
+
+  function onSubmit() {
+
+    $('#mailchimp-signup').submit(function() {
+      var action = $(this).attr('action');
+      loading();
+      $.ajax({
+        url: action,
+        type: 'POST',
+        data: {
+          email: $('#mailchimp-email').val(),
+          fname: $('#mailchimp-fname').val(),
+          lname: $('#mailchimp-lname').val()
+        },
+        success: function(data){
+          formResult(data);
+        },
+        error: function(data) {
+          formResult(data);
+        }
+      });
+    return false;
+    });
+  }onSubmit();
+
+});
+</script>
+
+</body>
+</html>
